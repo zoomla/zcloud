@@ -1,0 +1,15 @@
+﻿<div class="mbody">
+    <table class="table table-bordered">
+        <tr><th class="td_m">服务状态</th><td>{{model.status}}</td></tr>
+        <tr><th class="td_m">服务名称</th><td>{{model.name}}</td></tr>
+        <tr><th></th><td><!--call.sys.installService()-->
+            <button type="button" class="btn btn-info" onclick="call.sites.install();">安装服务</button>
+            <button type="button" class="btn btn-danger" onclick="call.sites.unInstall()">卸载服务</button>
+            </td></tr>
+    </table>
+    <div class="alert alert-info" style="margin-top:5px;">
+        <div>1.安装好站群Windows服务(须以管理员身份执行)</div>
+        <div>2.逐浪CMS主控站点中配置好密钥证书等信息</div>
+        <div>3.逐浪CMS主控站点--后台--站群中进行站点管理</div>
+    </div>
+</div>

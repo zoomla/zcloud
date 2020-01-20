@@ -1,0 +1,12 @@
+﻿<div class="mbody">
+    <table class="table table-bordered table-striped">
+        <tr><td class="td_m">FileZilla Server目录</td><td><input type="text" class="form-control" ng-model="model.fzdir" /></td></tr>
+        <tr><td>连接字符串</td><td><input type="text" class="form-control" ng-model="model.connstr" />
+           
+            </td></tr>
+        <tr><td></td><td><input type="button" ng-click="update();" class="btn btn-info" value="保存配置" /></td></tr>
+    </table>
+ <div class="alert alert-info" style="margin-top:5px;">
+    <div>1.创建完成数据库后,请拷贝执行/Config/Sql.txt中的命令,创建储存表</div>
+ </div>
+</div>

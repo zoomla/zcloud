@@ -1,0 +1,61 @@
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ 逐浪云管家v2..0                                            ┃
+┃ 版权所有: 逐浪软件(z01.com)                         ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃ Zoomla! Cloud Assistant Mange                  ┃
+┃ Copyright 2020 All Rights Reserved.             ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+┃【版权声明】                                                 ┃
+┃ 非逐浪官方授权许可，不得用于商业用途。      ┃
+┃ 用户因违规或主观使用中出现任何问题而造成  ┃
+┃ 的损失逐浪不负任何责任。                            ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+使用说明
+
+还在用付费的笨重而且不安全的Serv-U软件？
+没有合适的虚拟主机管理软件？
+能否智能的管理自己的服务器和云主机？
+多个站点管理不能有效的进行建立帐号？
+不能实时关闭到期站点的FTP和服务？
+能否在网站后台进行云主机管理？
+逐浪云管家(FileZilla Server智能助手)给您更好的选择！
+
+支持系统：windows8、windows 2008、windows 2012、windows 2012R2、windows 2016、win2019
+推荐架构：x64平台
+底层环境：Microsoft.NET Framework4.0
+推荐服务器安装IE11和Chrome浏览器。
+
+使用方法：
+1、解压本文件包。
+2、部署[FileZilla_Server_cn-0_9_46中文版.exe]，部署完成后，建议打开FileZilla Server软件，在其中建立一个随机会员组如other，保存激活此软件。
+3、在Microsoft SQL Server中建库，运行Config文件夹下的Data.sql文件，建表并赋予数据库（可与Zoomla!逐浪CMS完美结合）。
+4、双击[逐浪云官家.exe]，配置正确的参数，即可自由建立站点和管理FTP了，建立好站点后，推荐点击软件上的”重启FTP服务“以激活设置，会组可以使用不分组设置。
+5、在云管家中，部署站群和相应配置即可。
+
+
+在Zoomla!逐浪CMS2 x3.8中，还可以在后台-站群-全局配置-FTP管理中，进行移动与WEB化管理，轻松便捷。
+
+
+附：
+官方教程：
+https://www.z01.com/help/Cloud/3503.shtml
+
+Microsoft.NET Framework4.0安装程序：
+https://www.z01.com/down/2109.shtml
+
+关于FileZilla Server部署及相关知识可见：
+https://www.z01.com/search/SearchList?keyword=FileZilla_Serve&ButtonSo=%E6%90%9C++%E7%B4%A2
+
+
+
+上海逐一软件科技有限公司
+Shanghai Zoomla! SoftWare Techology CO.,LTD
+
+江西逐浪软件科技有限公司
+Jiangxi Joined Industries CO.,LTD
+
+★联合出品★
+
+逐浪软件项目组
+2020-1-20

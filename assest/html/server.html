@@ -1,0 +1,18 @@
+﻿<div class="mbody">
+    <table class="table table-bordered table-striped">
+        <tr><th>服务器地址</th><th>登录用户</th><th>备注</th><th>操作</th></tr>
+        <tr ng-repeat="item in list track by $index">
+            <td ng-bind="item.address"></td>
+            <td ng-bind="item.uname"></td>
+            <td ng-bind="item.remind"></td>
+            <td class="noexcel" style="width:240px;">
+                <button type="button" class="btn btn-info btn-sm" ng-click="connect(item.id);">远程连接</button>
+                <a ng-href="#/serverAdd/{{item.id}}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> 修改</a>
+                <button type="button" class="btn btn-danger btn-sm" ng-click="del(item.id)">删除</button>
+            </td>
+        </tr>
+    </table>
+<div class="mt5 text-center">
+    <a class="btn btn-info" ng-href="#/serverAdd/0"><i class="fa fa-plus"></i> 新增服务器</a>
+</div>
+</div>

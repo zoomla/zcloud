@@ -1,0 +1,48 @@
+﻿/* 全局样式定义 Powered by Zoomla!逐浪CMS z01.com*/
+.mr5 {margin-right:5px;}
+.ml5 {margin-left:5px;}
+.mt5 {margin-top:5px;}
+.mb5 {margin-bottom:5px;}
+.td_m{width:160px;}
+.r_gray {color:#808080;font-size:12px;}
+.text300 {width:300px;display:inline-block;}
+.text_400{width:400px;display:inline-block;}
+
+body {height:630px;overflow-y:auto;padding-top:80px;FONT-FAMILY:"Microsoft Yahei", SimSun, Tahoma, Helvetica, Arial, sans-serif;}
+.main {background-color:#62AAD8;}
+.mhead {padding:5px;position:fixed;top:0px;width:100%;background-color:#62AAD8;padding-top:0px;}
+.mhead_top {}
+.mhead .head_sys_tools {border:1px solid #1D76D2;padding-left:5px; border-radius:0 0 5px 5px;}
+.head_sys_tools a {margin-right:3px;padding-right:5px; border-right:1px solid #1D76D2;color:#fff;font-size:16px;}
+
+.mhead_tools {color:#fff; list-style:none;}/*主导航*/
+.mhead_tools li a {text-decoration:none;color:#fff;font-size:12px;display:block;height:100%;}
+.mhead_tools li {border:1px solid #62AAD8;float:left; margin-left:10px;width:80px;text-align:center;padding:5px;}
+.mhead_tools li.active {background-color:#66AFFE;border:1px solid #66AFFE; box-shadow:0 4px 20px 1px rgba(0,0,0,0.2);border-radius:3px;}
+.mhead_tools li:hover {background-color:#66AFFE;border:1px solid #66AFFE;cursor:pointer; box-shadow:0 4px 20px 1px rgba(0,0,0,0.2);border-radius:3px;}
+.mhead_tools a:hover {text-decoration:none;color:#fff;}
+.mhead_tools li .fa{font-size:40px;display:block;}
+.mhead_tools li span {padding-top:3px;display:inline-block;}
+.mbody {height:500px;background-color:#fff;padding:8px;margin-top:16px; }/*border:3px solid #3D99FE;border-top:none;*/
+
+.navbar-nav{ padding-right:1.5em;}/*版权与补充导航*/
+.navbar-nav .dropdown-menu{min-width:inherit;}
+.navbar-nav li{text-align:center;}
+#welcome_page .left {background: linear-gradient(90deg, #1E90FF,#276ace);color: #fff;border-right: 10px solid #276ace;}
+#welcome_page .left .item{display:block;line-height:30px;font-size:14px;cursor:pointer;text-decoration:none;color:#fff;}
+#welcome_page .left .item:hover{color:#ffd800;}
+#welcome_page .right {
+    padding: 5%;
+    padding-top: 0px;
+    background: linear-gradient(0deg, #276ace, #1E90FF,#276ace);
+}
+#welcome_page .right .item { text-align: center; width: 170px; height: 130px; float: left; margin-right: 15px; margin-bottom: 15px; background-color: rgb(19,163,233); color: #fff; padding-top: 20px;
+ border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 5px 0px, rgba(0, 0, 0, 0.0784314) 0px 2px 10px 0px;
+cursor:pointer;text-decoration:none;
+}
+#welcome_page .right .item:hover{background-color:#0094ff;}
+#welcome_page .right .item i {
+    font-size: 55px;
+}
+#welcome_page .right .item span{font-size:16px;display:block;margin-top:10px;}
+/*key:UG93ZXJlZCBieSBab29tbGEh6YCQ5rWqQ01TIHd3d3cuejAxLmNvbQ== */

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="../libs/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="../libs/dist/css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/global.css" rel="stylesheet" />
+<script src="../libs/jquery.js"></script>
+<script src="../libs/jquery.validate.min.js"></script>
+<script src="../libs/dist/js/bootstrap.min.js"></script>
+<script src="../libs/DatePicker/WdatePicker.js"></script>
+<script src="../libs/zl_regex.js"></script>
+<script src="../libs/global.js"></script>
+<script src="../libs/angular.min.js"></script>
+<script src="../libs/angular-route.min.js"></script>
+<title>逐浪云管家-(FileZilla Server智能助手)-Zoomla!逐浪CMS团队荣誉出品！</title>
+</head>
+<body>
+<div class="main" id="main_div" ng-app="APP">
+  <div class="mhead">
+    <div>
+      <ul class="mhead_tools" style="padding-left:10px;">
+        <li class="active"><a href="#/welcome"><i class="fa fa-home"></i><span>首页</span></a></li>
+        <li><a href="#/user/list"><i class="fa fa-users"></i><span>用户管理</span></a></li>
+        <li><a href="#/user/add"><i class="fa fa-user-plus"></i><span>添加用户</span></a></li>
+        <li><a href="#/server"><i class="fa fa-desktop"></i><span>主机控制</span></a></li>
+        <li><a href="#/sites"><i class="fa fa-cloud"></i><span>站群布署</span></a></li>
+        <!--<li><a href="#/config"><i class="fa fa-cog"></i><span>参数配置</span></a></li>-->
+        <!--<li class="pull-right" onclick="call.sys.openurl('http://www.z01.com/pub');"><a href="javascript:;"><i class="fa fa-download"></i><span>下载逐浪CMS</span></a></li>
+        <li class="pull-right" onclick="call.sys.openurl('http://www.z01.com/help/Cloud/3066.shtml');"><a href="javascript:;"><i class="fa fa-question-circle-o"></i><span>使用帮助</span></a></li>-->
+        <li onclick="alert('版本号：V2.0,基于Zoomla!逐浪CMS,官网:www.z01.com')" class="pull-right"><a href="javascript:;"><i class="fa fa-exclamation-circle"></i><span>关于</span></a></li>
+        <li onclick="call.sys.opendev();" class="pull-right"><a href="javascript:;"><i class="fa fa-asterisk"></i><span>开启调试</span></a></li>
+        <!--<li onclick="call.sys.close();" class="pull-right"><a href="javascript:;"><i class="fa fa-external-link"></i>退出应用</a></li>-->
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div ng-view></div>
+</div>
+<script>
+var scope = null;
+angular.module("APP", ["ngRoute"])
+.controller("WelcomeCtrl", function ($scope) {
+
+})
+.controller("UserListCtrl", function ($scope) {
+    scope = $scope;
+    $scope.list = call.user.list(false);
+    $scope.deluser = function (item) {
+        if (!confirm("确定要删除吗")) { return; }
+        call.user.del(item.Name);
+        location = "#/user/list";
+    }
+    $scope.outToExcel = function () {
+        call.sys.outToExcel($("#EGV")[0].outerHTML, "用户列表");
+    }
+    $scope.reload = function () {
+        $scope.list = call.user.list(true);
+    }
+    //------------
+    $scope.getStatus = function (status) {
+        switch (status) {
+            case "0":
+                return "禁用";
+            case "1":
+                return "启用";
+            case "2":
+                return "有条件启用";
+            default:
+                return status;
+        }
+    }
+})
+.controller("ConfigCtrl", function ($scope) {
+    scope = $scope;
+    $scope.model = call.config.get();
+   
+    $scope.update = function () {
+        console.log($scope.model);
+        call.config.update(angular.toJson($scope.model));
+    }
+})
+.controller("UserAddCtrl", function ($scope, $routeParams) {
+    scope = $scope;
+    $scope.name = $routeParams.name;
+    $scope.gplist = call.group.list();
+    $scope.model = { Name: "", Enabled: "1",Group:"" };
+    if (!ZL_Regex.isEmpty($scope.name)) {
+        $scope.model = call.user.get($scope.name);
+    } else { $scope.name = ""; }
+    //检测是否可以提交
+    $scope.check = function () {
+        var fields = "Name|UserPwd|Enddate|Dir".split('|');
+        $scope.model.Enddate = $("#Enddate_T").val();
+        $scope.model.Enabled = document.getElementById("enabled_chk").checked ? 1 : 0;//1:启用,0:禁用
+        for (var i = 0; i < fields.length; i++) {
+            var field = fields[i];
+            if (ZL_Regex.isEmpty($scope.model[field])) { alert(field + "的值为空"); return false; }
+        }
+        return true;
+    }
+    $scope.save = function () {
+        if (!$scope.check()) { return false; }
+        var json = angular.toJson($scope.model);
+        if (ZL_Regex.isEmpty($scope.name)) { call.user.add(json); alert("添加成功"); }
+        else { call.user.update(json); alert("更新成功"); }
+        location = "#/user/list";
+    }
+})
+.controller("ServerCtrl", function ($scope) {
+    scope = $scope;
+    $scope.list = call.server.list();
+    $scope.del = function (id) {
+        if (!confirm("确定要删除吗")) { return; }
+        call.server.del(id);
+        location = "#/server";
+    }
+    $scope.connect = function (id) { wpf.server_connect(Convert.ToInt(id)); }
+})
+.controller("ServerAddCtrl", function ($scope, $routeParams) {
+    scope = $scope;
+    $scope.id = $routeParams.id;
+    $scope.model = call.server.get($scope.id);
+    $scope.save = function () {
+        if (ZL_Regex.isEmpty($scope.model.address)) { alert("地址不能为空"); return false; }
+        if (ZL_Regex.isEmpty($scope.model.uname)){ alert("用户名不能为空"); return false; }
+        var json = angular.toJson($scope.model);
+        call.server.add(json);
+        location = "#/server";
+    }
+})
+.controller("SitesCtrl", function ($scope) {
+    scope = $scope;
+    $scope.model = call.sites.get();
+})
+.config(function ($routeProvider) {
+    $routeProvider.when("/", { templateUrl: "user/list.html", controller: "UserListCtrl" })
+        .when("/welcome",{ templateUrl: "welcome.html", controller: "WelcomeCtrl" })
+        .when("/user/edit/:name", { templateUrl: "user/add.html", controller: "UserAddCtrl" })
+        .when("/user/add", { templateUrl: "user/add.html", controller: "UserAddCtrl" })
+        .when("/config", { templateUrl: "config.html", controller: "ConfigCtrl" })
+        .when("/server", { templateUrl: "server.html", controller: "ServerCtrl" })
+        .when("/serverAdd/:id", { templateUrl: "serverAdd.html", controller: "ServerAddCtrl" })
+        .when("/sites", { templateUrl: "sites.html", controller: "SitesCtrl" })
+        .otherwise({ redirectTo: "/" })
+})
+.service("Product", function () {
+    return { test: function () { alert("556"); } }
+})
+//window.onerror = function (msg) { alert(msg); }
+//call.sys.opendev();
+$(function () {
+    $(".mhead_tools li").click(function () {
+        if ($(this).hasClass("active")) { return; }
+        $(".mhead_tools li").removeClass("active");
+        $(this).addClass("active");
+    });
+})
+</script>
+</body>
+</html>

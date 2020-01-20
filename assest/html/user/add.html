@@ -1,0 +1,43 @@
+﻿<div class="mbody">
+<table class="table table-bordered">
+<tr><td class="td_m">用户名</td><td><input type="text" class="form-control text_300" ng-model="model.Name" ng-disabled="name!=''"/></td></tr>
+<tr><td>密码</td><td><input type="text" class="form-control text_300" ng-model="model.UserPwd"/></td></tr>
+<tr><td>会员组</td><td>
+<label><input type="radio" name="group_rad" ng-model="model.Group" value=""/>不分组</label>
+<label ng-repeat="item in gplist track by $index"><input type="radio" name="group_rad" ng-model="model.Group" value="{{item.Name}}"/>{{item.Name}}</label>
+</td></tr>
+<tr><td>用户状态</td><td>
+<label><input type="checkbox" ng-checked="model.Enabled==1" id="enabled_chk" />启用账号</label>
+</td></tr>
+<tr><td>到期时间</td><td><input type="text" class="form-control text_300" onclick="WdatePicker({ dateFmt: 'yyyy/MM/dd' })" ng-model="model.Enddate" id="Enddate_T"/></td></tr>
+<!--<tr><td colspan="2">
+<table class="table table-bordered">
+    <tr><td class="text_300">路径</td><td>读取</td><td>写入</td><td>删除</td><td>FileAppend</td>
+    <td>DirCreate</td><td>DirDelete</td><td>DirList</td><td>DirSubdirs</td>
+    <td>IsHome</td><td>AutoCreate</td><td class="td_m">操作</td></tr>
+    <tr ng-repeat="item in perList track by $index">
+        <td><input type="text" class="form-control" ng-model="item.Dir" /></td>
+        <td><input type="checkbox" ng-model="item.FileRead" /></td>
+        <td><input type="checkbox" ng-model="item.FileWrite" /></td>
+        <td><input type="checkbox" ng-model="item.FileDelete" /></td>
+        <td><input type="checkbox" ng-model="item.FileAppend" /></td>
+        <td><input type="checkbox" ng-model="item.DirCreate" /></td>
+        <td><input type="checkbox" ng-model="item.DirDelete" /></td>
+        <td><input type="checkbox" ng-model="item.DirList" /></td>
+        <td><input type="checkbox" ng-model="item.DirSubdirs" /></td>
+        <td><input type="checkbox" ng-model="item.IsHome" /></td>
+        <td><input type="checkbox" ng-model="item.AutoCreate" /></td>
+        <td><input type="button" ng-click="preDel(item);" value="删除" class="btn btn-danger" /></td>
+    </tr>
+</table>
+<div class="text-center"><input type="button" value="新增目录" ng-click="perAdd();" class="btn btn-info"/></div>
+</td></tr>-->
+<tr><td>用户目录</td><td><input type="text" class="form-control text_300" ng-model="model.Dir" placeholder="示例:C:\User\"/></td></tr>
+<tr><td>站点名称</td><td><input type="text" class="form-control text_300" ng-model="model.SiteInfo" placeholder="IIS站点名称,注意大小写" /></td></tr>
+<tr><td>用户备注</td><td><textarea class="form-control text_300" style="height:100px;" ng-model="model.Comments"></textarea></td></tr>
+<tr><td></td><td>
+<input type="button" ng-click="save();" class="btn btn-info" value="保存信息" />
+<a href="#/user/list" class="btn btn-default">返回列表</a>
+</td></tr>
+</table>
+</div>

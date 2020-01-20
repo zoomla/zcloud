@@ -1,0 +1,29 @@
+﻿<div class="mbody">
+<table class="table table-bordered table-striped" id="EGV">
+    <tr><td>FTP帐户</td><td>用户目录</td><td>密码</td><td>用户组</td><td>状态</td><td>创建时间</td><td>到期时间</td><td class="noexcel">操作</td></tr>
+    <tr ng-repeat="user in list track by $index">
+        <td ng-bind="user.Name"></td>
+        <td ng-bind="user.Dir"></td>
+        <td ng-bind="user.UserPwd"></td>
+        <td ng-bind="user.Group"></td>
+        <td ng-bind="getStatus(user.Enabled)"></td>
+        <td ng-bind="user.CDate"></td>
+        <td ng-bind="user.Enddate"></td>
+        <td class="noexcel">
+            <a ng-href="#/user/edit/{{user.Name}}"><i class="fa fa-edit"></i> 修改</a>
+            <!--<a href="javascript:;"><i class="fa fa-trash"></i> 禁用</a>-->
+            <a href="javascript:;" ng-click="deluser(user);"><i class="fa fa-trash"></i> 删除</a>
+        </td>
+    </tr>
+</table>
+<div class="mt5 text-center">
+    <button type="button" ng-click="reload();" class="btn btn-info"><i class="fa fa-list"></i> 重加载数据</button>
+    <button type="button" onclick="call.fz.restart();" class="btn btn-info"><i class="fa fa-recycle"></i> 重启FTP服务</button>
+    <button type="button" ng-click="outToExcel();" class="btn btn-info"><i class="fa fa-download"></i> 导出用户列表</button>
+    <button type="button" onclick="call.fz.backup();" class="btn btn-info"><i class="fa fa-copy"></i> 备份FTP设置</button>
+</div>
+<div class="alert alert-info" style="margin-top:5px;">
+    <div>1.现读取的配置文件为[FileZilla Server.xml]</div>
+    <div>2.请使用FZ Server手动添加一个用户组与用户,便于初始化</div>
+</div>
+</div>

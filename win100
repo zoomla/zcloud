@@ -1,0 +1,49 @@
+screen mode id:i:2
+use multimon:i:0
+desktopwidth:i:1600
+desktopheight:i:900
+session bpp:i:32
+winposstr:s:0,3,0,0,800,600
+compression:i:1
+keyboardhook:i:2
+audiocapturemode:i:0
+videoplaybackmode:i:1
+connection type:i:2
+networkautodetect:i:1
+bandwidthautodetect:i:1
+displayconnectionbar:i:1
+enableworkspacereconnect:i:0
+disable wallpaper:i:1
+allow font smoothing:i:0
+allow desktop composition:i:0
+disable full window drag:i:1
+disable menu anims:i:1
+disable themes:i:0
+disable cursor setting:i:0
+bitmapcachepersistenable:i:1
+audiomode:i:1
+redirectprinters:i:1
+redirectcomports:i:0
+redirectsmartcards:i:1
+redirectclipboard:i:1
+redirectposdevices:i:0
+autoreconnection enabled:i:1
+authentication level:i:2
+prompt for credentials:i:0
+negotiate security layer:i:1
+remoteapplicationmode:i:0
+alternate shell:s:
+shell working directory:s:
+gatewayhostname:s:
+gatewayusagemethod:i:4
+gatewaycredentialssource:i:4
+gatewayprofileusagemethod:i:0
+promptcredentialonce:i:0
+use redirection server name:i:0
+rdgiskdcproxy:i:0
+kdcproxyname:s:
+drivestoredirect:s:
+redirectdirectx:i:1
+full address:s:win100
+username:s:admin
+password 51:b:01000000D08C9DDF0115D1118C7A00C04FC297EB01000000DF2F5589E837D7419CE6B0B4A025599504000000020000000000106600000001000020000000D17692B23F5DEFFC30517CB01BD722F200EA6A5A891EA4AAD733E18FC52B7F72000000000E80000000020000200000009CC919379717B2D0222900429D95E523F66D65B1B835373706CFB2F34EC13B95200000003EC24C2D09ED29B397E4BE9AD0F42CFCDBEBF20BD37195DD1365398F227B7EAB40000000BB598540FCC9BC3B0DB78D1FD9CA3CD4EF76319403B91C44E26C48F0D4128B7E3C3564A9262BD552D4FE9CD6AD32E28B16CDC2D24C41FF0216A5D3E78084D6CF
