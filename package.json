@@ -1,0 +1,40 @@
+{
+  "name": "zcloud",
+  "version": "1.0.0",
+  "description": "Cloud-based management assistant-Zoomla!逐浪CMS团队发布的优秀主机管理软件可对FTP和站群以及RDP远程桌面智能管理高效卓越",
+  "main": "逐浪云官家.exe",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoomla/zcloud.git"
+  },
+  "keywords": [
+    "zoomla",
+    "逐浪云管家",
+    "FTP助手",
+    "IIS助手",
+    "管理服务器",
+    "服务器助手",
+    "站群助理",
+    "cms助手",
+    "主机助手",
+    "站群助手",
+    "智能FTP",
+    "智能主机",
+    "云管家",
+    "远程桌面",
+    "RDP管理",
+    "快速RDP",
+    "快速连接",
+    "虚拟主机",
+    "cloud"
+  ],
+  "author": "zoomla cms",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoomla/zcloud/issues"
+  },
+  "homepage": "https://github.com/zoomla/zcloud#readme"
+}
