@@ -6,13 +6,17 @@
 
 <h1 align="center">逐浪云管家</h1>
 
-## 💻专注web开发-做中国原创顶级网站内容管理系统
+## 💻依托逐浪CMS团队，构建最优秀的云端管理工具
 
 ### 🍈源码结构：
-- ZoomLa逐浪CMS_1.0源码:  基于.net2.0框架的CMS内核源码，对于32位操作系统有着良好的支持。
-- Zoomla逐浪CMS2_x3.8源码：基于.net4.0框架的CMS内核源码，原生的win2012r2操作系统研发，企业级开发。
+- FTP管理
+- RDP云桌面管理
+- 站群伺服管理
+- 逐浪服务资源
 
-未来我们将全面开放转入到基于微软.netCore内核平台研发，并通过<a href="http://www.73ic.com">【去上云73ic.com】</a>平台为大家提供服务。
+
+详细操作请看 逐浪云管家使用手册.pdf
+
 
 😛😜😝😒😓😔😕😲😛😜😝😒😓😔😕😲
 传送门->对于新版Zoomla!逐浪CMS v8（即基于.net Core内核的全新一代CMS，目前已经投入商用，并面向商业用户和VIP会员进行投递，如果您感兴趣，可以访问我们官网<a href="http://www.z01.com">www.z01.com</a>获得相应支持，本库用于逐浪CMS历史版本开源计划。
@@ -100,7 +104,7 @@ Zoomla!逐浪CMS用技术推进研发。
  <a href="http://www.z01.com/y10/">
     <img src="dist/images/t12.jpg">
   </a>
-我们产品是基于Microsoft.Net4.0（开源版本为NET2.0）+MSSQ2005以及更高版本，产品免费开放，并提供云模板。
+我们产品是基于Microsoft.Net4.0+MSSQ2005以及更高版本，产品免费开放，并提供云模板。
   
 
 我们的官网：http://www.z01.om  
@@ -121,11 +125,11 @@ Zoomla!逐浪CMS用技术推进研发。
 <hr style="margin-top:10rem"/>
 
 #### 🌚功能图赏 （以下只有图无正文）
-<img src="dist/images/t4.jpg">
-<img src="dist/images/t5.jpg">
-<img src="dist/images/t6.jpg">
-<img src="dist/images/t7.jpg">
-<img src="dist/images/t8.jpg">
-<img src="dist/images/t9.jpg">
-<img src="dist/images/t10.jpg">
-<img src="dist/images/t11.jpg">
+<img src="https://www.z01.com/UploadFiles/Image/20200121/6371520039883282845644951.jpg">
+<img src="https://www.z01.com/UploadFiles/Image/20200121/6371520039946896028306425.jpg">
+<img src="https://www.z01.com/UploadFiles/Image/20200121/6371520040214743237145307.jpg">
+<img src="https://www.z01.com/UploadFiles/Image/20200121/6371520040263082307948132.jpg">
+<img src="https://www.z01.com/UploadFiles/Image/20200121/6371520040587712627319064.jpg">
+<img src="https://www.z01.com/UploadFiles/Image/20200121/6371520040587637959109172.jpg">
+<img src="https://www.z01.com/UploadFiles/Image/20200121/6371520040637225557611064.jpg">
+<img src="https://www.z01.com/UploadFiles/Image/20200121/6371520040264630282751941.jpg">
