@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://z01.com">
-    <img width="900" src="//www.z01.com/UploadFiles/Image/20200121/6371520039883282845644951.jpg">
+    <img width="900" src="https://www.z01.com/UploadFiles/Image/20200121/6371520039883282845644951.jpg">
   </a>
 </p>
 
